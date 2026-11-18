@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INK ROOM by PRAD | Nail studio, Sarojini Nagar (concept demo)</title>
+<meta name="description" content="A nail studio in Sarojini Nagar. Choose your ink, pick a style and book a slot on WhatsApp. A concept demo, not the official site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Brief: INK ROOM by PRAD, nail studio, Sarojini Nagar. Nail art with an editorial, tattoo-studio attitude.
+   Idea: the ink. Pick an ink colour and a blot spreads across the hero; the whole page takes that ink as its accent, and the colour goes into the booking message.
+   Photos: labelled Unsplash stock, placeholders for the studio's own. */
+:root{--bg:#0d0b0e;--fg:#f2ece6;--ink:#e6e1dc;--ac:#e6e1dc;--card:#17131a;--mute:#9a9099;--line:rgba(242,236,230,.14);--disp:'Anton',Impact,sans-serif;--ser:'Instrument Serif',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--fg);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin:0 auto}
+h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:.92;text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(2.6rem,6vw,5rem)}em{font-family:var(--ser);font-style:italic;text-transform:none;color:var(--ac);transition:color .6s}
+.lab{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--ac);transition:color .6s}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:1em 1.8em;background:var(--ac);color:#0d0b0e;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;text-decoration:none;transition:transform .3s,background .6s}
+.btn:hover{transform:translateY(-2px)}.btn.o{background:none;color:var(--fg);border:1px solid var(--line)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rv.in{opacity:1;transform:none}
+nav{position:fixed;inset:0 0 auto;z-index:50;padding:14px 0;background:rgba(13,11,14,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:var(--disp);font-size:1.4rem;letter-spacing:.08em;text-decoration:none;text-transform:uppercase}.logo small{font-family:var(--ser);font-style:italic;text-transform:none;letter-spacing:0;color:var(--ac);font-size:1rem;margin-left:6px;transition:color .6s}
+nav ul{display:flex;gap:26px;list-style:none;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}nav ul a{text-decoration:none;opacity:.7}nav ul a:hover{opacity:1}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;padding:120px 0 60px;overflow:hidden;isolation:isolate}
+.hero .photo{position:absolute;inset:0;z-index:-2}.hero .photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.85) contrast(1.1) brightness(.55)}
+.blot{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.blot svg{width:100%;height:100%}
+.blot circle{fill:var(--ac);mix-blend-mode:multiply;opacity:.8;transition:r 1.4s var(--ease),fill .6s}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,11,14,.2),var(--bg) 94%)}
+.hero h1{font-size:clamp(5rem,19vw,17rem);letter-spacing:-.01em;line-height:.8;margin-bottom:18px}
+.hero p.s{max-width:440px;color:#c8bfc7;margin:0 0 24px}
+.inks{display:flex;gap:12px;align-items:center;margin-bottom:26px;flex-wrap:wrap}.inks small{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-right:6px;font-weight:600}
+.ik{width:42px;height:42px;border-radius:50%;border:2px solid rgba(255,255,255,.7);box-shadow:0 8px 16px -8px #000;transition:transform .3s}.ik:hover{transform:scale(1.12)}.ik.on{box-shadow:0 0 0 3px var(--bg),0 0 0 5px #fff;transform:scale(1.1)}
+section{padding:100px 0}
+.st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.sv{background:var(--bg);padding:26px 22px 24px;cursor:pointer;text-align:left;transition:background .4s;position:relative}.sv:hover{background:var(--card)}.sv.on{background:var(--card);box-shadow:inset 0 3px 0 var(--ac)}
+.sv b{font-family:var(--disp);font-weight:400;font-size:1.8rem;display:block;text-transform:uppercase;line-height:1}.sv small{display:block;color:var(--mute);font-size:.82rem;margin:8px 0 14px;min-height:3.6em}.sv span{font-family:var(--ser);font-size:1.4rem;color:var(--ac)}.sv i{position:absolute;right:16px;top:16px;font-style:normal;font-size:.75rem;color:var(--ac);opacity:0}.sv.on i{opacity:1}
+.bk{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:50px;align-items:start}
+.bk img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.3)}
+.form{display:grid;gap:22px}.form label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:8px;font-weight:600}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chips button{padding:.55em 1.1em;border:1px solid var(--line);font-size:.85rem;transition:.3s}.chips button.on{background:var(--ac);border-color:var(--ac);color:#0d0b0e;font-weight:600}
+.form input{width:100%;background:none;border:1px solid var(--line);padding:.85em 1em;color:var(--fg);font:inherit}
+.sum{font-family:var(--ser);font-size:1.5rem;color:var(--ac)}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:36px}.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(.2);transition:transform .8s var(--ease),filter .5s}.gal div{overflow:hidden}.gal div:hover img{transform:scale(1.06);filter:none}
+.band{background:var(--card);border-block:1px solid var(--line)}
+footer{padding:30px 0 90px;font-size:.78rem;color:var(--mute);text-align:center}
+.sticky{display:none}
+@media(max-width:860px){nav ul{display:none}.st{grid-template-columns:1fr 1fr}.bk{grid-template-columns:1fr;gap:30px}.bk img{aspect-ratio:16/10}.gal{grid-template-columns:1fr 1fr}section{padding:72px 0}
+.sticky{display:flex;position:fixed;inset:auto 0 0;z-index:60;padding:10px 16px;background:var(--bg);border-top:1px solid var(--line)}.sticky .btn{flex:1;justify-content:center}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#">Ink Room<small>by Prad</small></a><ul><li><a href="#styles">Styles</a></li><li><a href="#book">Book</a></li><li><a href="#gal">Work</a></li></ul><a class="btn" href="#book" style="padding:.7em 1.3em">Book</a></div></nav>
+
+<header class="hero"><div class="photo"><img src="img/dark.jpg" alt="Dark glossy nails against a grey sweater"></div>
+<div class="blot"><svg id="bl" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"><circle cx="72" cy="38" r="0"/><circle cx="58" cy="52" r="0"/><circle cx="82" cy="58" r="0"/></svg></div>
+<div class="wrap"><p class="lab">Nail studio · Sarojini Nagar, Delhi</p><h1>Ink <em>Room</em></h1><p class="s">Nail art with attitude. Pick your ink, watch it spread, choose your style and send the booking on WhatsApp.</p>
+<div class="inks" id="inks"><small>Choose your ink</small></div><a class="btn" href="#styles">Pick a style</a> <a class="btn o" href="#gal">See the work</a></div></header>
+
+<section id="styles"><div class="wrap"><p class="lab rv">Styles</p><h2 class="rv">Pick your <em>canvas.</em></h2><div class="st rv" id="st"></div>
+<p style="color:var(--mute);font-size:.78rem;margin-top:12px">Styles and prices are sample content for this concept.</p></div></section>
+
+<section class="band" id="book"><div class="wrap"><p class="lab rv">Book</p><h2 class="rv">Lock in <em>your slot.</em></h2>
+<div class="bk"><img src="img/tech.jpg" alt="Nail technician at work" loading="lazy"><div class="form"><div><label>Day</label><div class="chips" id="cd"></div></div><div><label>Time</label><div class="chips" id="ct"></div></div><div><label>Name</label><input id="nm" placeholder="Your name" autocomplete="name"></div><div class="sum" id="sum"></div><a class="btn" id="go" href="#" style="justify-content:center">Send booking on WhatsApp</a><p style="color:var(--mute);font-size:.78rem">Call 092118 94060. Add real address and hours here, near Sarojini Nagar.</p></div></div></div></section>
+
+<section id="gal"><div class="wrap"><p class="lab rv">The work</p><h2 class="rv">Small art. <em>Loud effect.</em></h2><div class="gal rv"><div><img src="img/art.jpg" alt="Colourful abstract nails" loading="lazy"></div><div><img src="img/love.jpg" alt="Handwritten love nails" loading="lazy"></div><div><img src="img/mani.jpg" alt="Manicure" loading="lazy"></div><div><img src="img/bottles.jpg" alt="Polish bottles" loading="lazy"></div></div>
+<p style="color:var(--mute);font-size:.75rem;margin-top:12px">Stock photos (Unsplash contributors), placeholders for the studio's own work.</p></div></section>
+<footer>Concept demo by Kavimir for INK ROOM by PRAD. Not the official site. Photos: Unsplash contributors.</footer>
+<div class="sticky"><a class="btn" href="#book">Book a slot</a></div>
+<script>
+const IK=[['Bone','#e6e1dc'],['Oxblood','#a3162f'],['Cobalt','#2f4bff'],['Chrome','#9fb3c4'],['Jade','#18b38a'],['Violet','#8a46ff']];
+const SV=[['Minimal','Clean shapes, sheer or solid colour',700],['Chrome','Mirror, aura and cat-eye finishes',1400],['Art','Hand-painted, 3D, charms',2200],['Extensions','Gel or acrylic with full art',3200]];
+const st={i:0,s:1,d:'Today',t:'5 pm'};
+const I=document.getElementById('inks');
+IK.forEach((k,n)=>{const b=document.createElement('button');b.className='ik'+(n?'':' on');b.style.background=k[1];b.setAttribute('aria-label',k[0]);b.onclick=()=>{st.i=n;document.querySelectorAll('.ik').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.documentElement.style.setProperty('--ac',k[1]);const c=document.querySelectorAll('#bl circle');[[72,38,34],[58,52,24],[82,58,20]].forEach((v,j)=>{c[j].setAttribute('r',0);setTimeout(()=>c[j].setAttribute('r',v[2]),60+j*140)});sum()};I.appendChild(b)});
+const S=document.getElementById('st');
+function ds(){S.innerHTML=SV.map((s,i)=>`<button class="sv ${st.s==i?'on':''}" data-i="${i}"><i>✓ chosen</i><b>${s[0]}</b><small>${s[1]}</small><span>from Rs ${s[2].toLocaleString('en-IN')}</span></button>`).join('')}
+S.onclick=e=>{const b=e.target.closest('.sv');if(b){st.s=+b.dataset.i;ds();sum()}};ds();
+function chips(id,arr,k){const el=document.getElementById(id);el.innerHTML=arr.map(a=>`<button class="${st[k]==a?'on':''}">${a}</button>`).join('');el.onclick=e=>{if(e.target.tagName!='BUTTON')return;st[k]=e.target.textContent;chips(id,arr,k);sum()}}
+chips('cd',['Today','Tomorrow','Weekend'],'d');chips('ct',['12 pm','2 pm','4 pm','5 pm','6:30 pm'],'t');
+function sum(){const n=document.getElementById('nm').value.trim(),s=SV[st.s];document.getElementById('sum').textContent=`${s[0]} · ${IK[st.i][0]} ink · ${st.d}, ${st.t}`;document.getElementById('go').href='https://wa.me/919211894060?text='+encodeURIComponent(`Hi INK ROOM! I'd like to book a ${s[0]} set in ${IK[st.i][0]} ink, ${st.d} at ${st.t}.${n?' Name: '+n+'.':''} Estimated from Rs ${s[2]}.`)}
+document.getElementById('nm').oninput=sum;sum();
+setTimeout(()=>document.querySelectorAll('#bl circle').forEach((c,j)=>setTimeout(()=>c.setAttribute('r',[34,24,20][j]),j*160)),500);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+</script>
+</body></html>
